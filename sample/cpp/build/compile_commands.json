@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/taisei/Desktop/main/program/my-nvim-setting/sample/cpp/build",
+  "command": "\"C:\\Program Files (x86)\\mingw64\\bin\\g++.exe\" -g -std=c++20 -Wall -Wextra -Wpedantic -Wconversion -o CMakeFiles\\brainfuck.dir\\src\\main.cpp.obj -c C:\\Users\\taisei\\Desktop\\main\\program\\my-nvim-setting\\sample\\cpp\\src\\main.cpp",
+  "file": "C:/Users/taisei/Desktop/main/program/my-nvim-setting/sample/cpp/src/main.cpp",
+  "output": "C:/Users/taisei/Desktop/main/program/my-nvim-setting/sample/cpp/build/CMakeFiles/brainfuck.dir/src/main.cpp.obj"
+}
+]

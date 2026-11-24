@@ -1,0 +1,5 @@
+# ninja log v7
+4	852	8172473673571206	CMakeFiles/brainfuck.dir/src/main.cpp.obj	88c1fd95e4165379
+855	1051	8172473682079972	brainfuck.exe	5a4ee4934a2a2198
+9	899	8172474112193970	CMakeFiles/brainfuck.dir/src/main.cpp.obj	88c1fd95e4165379
+900	1116	8172474121099863	brainfuck.exe	5a4ee4934a2a2198
