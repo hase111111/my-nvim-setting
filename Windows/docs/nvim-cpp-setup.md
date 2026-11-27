@@ -17,6 +17,7 @@
 | ripgrep | Telescopeによるファイル内容検索 |
 | lazy.nvim | Neovimプラグイン管理 |
 | Mason | clangdの管理 |
+| nvim-tree.lua | ツリー型ファイラー |
 
 コンパイラにはGCCを使用します。clangdはエディタ上の解析にのみ使用し、実際のビルドにはG++を使います。
 
@@ -87,10 +88,19 @@ Neovimを導入済みで、補助ツールだけ追加する場合は次を使�
 - `tokyonight.nvim`
 - `which-key.nvim`
 - `telescope.nvim`
+- `nvim-tree.lua`
 - `nvim-treesitter`
 - `mason.nvim`
 - `nvim-lspconfig`
 - `blink.cmp`
+- `barbar.nvim`
+- `lualine.nvim`
+- `toggleterm.nvim`
+- `winresizer`
+- `nvim-autopairs`
+- `nvim-hlslens`
+- `nvim-scrollbar`
+- `accelerated-jk.nvim`
 
 更新後の`lazy-lock.json`はリポジトリの`Windows/nvim`へ戻され、Gitで管理されます。
 
@@ -215,8 +225,37 @@ nvim .\src\main.cpp
 | `<Space>ca` | コードアクション |
 | `<Space>d` | 現在位置の診断を表示 |
 | `[d` / `]d` | 前後の診断へ移動 |
+| `<Space>t` / `Ctrl+\` | ターミナルを開閉 |
+| `<Space>wr` | ウィンドウサイズ変更モード |
+| `Alt+,` / `Alt+.` | 前後のバッファへ移動 |
+| `Alt+c` | バッファを閉じる |
+| `Alt+p` | バッファを固定／解除 |
+| `j` / `k` | 上下移動（連続入力すると加速） |
 
-## 10. トラブルシューティング
+画面右端のスクロールバーには、現在位置に加えて診断と検索結果の位置が表示されます。検索位置は`nvim-scrollbar`のネイティブ検索機能で表示し、`nvim-hlslens`は検索件数と現在位置の表示を担当します。
+
+## 10. ファイラー
+
+ファイル操作には`nvim-tree.lua`を使用します。`<Space>e`で画面左側のツリーを開閉でき、開いているファイルはツリー内で自動的に追跡されます。Gitの状態とLSP診断もファイル名に反映されます。
+
+| キー | 機能 |
+|---|---|
+| `<Space>e` | ツリーを開閉 |
+| `<CR>` / `o` | ファイルまたはディレクトリを開く |
+| `-` | 1つ上のディレクトリへ移動 |
+| `a` | ファイルまたはディレクトリを作成 |
+| `r` | 名前を変更 |
+| `d` | 削除 |
+| `x` / `c` / `p` | 切り取り／コピー／貼り付け |
+| `H` | 隠しファイルの表示を切り替える |
+| `I` | `.gitignore`対象の表示を切り替える |
+| `R` | ツリーを再読み込み |
+| `g?` | nvim-treeのキー一覧を表示 |
+| `q` | ツリーを閉じる |
+
+削除操作では確認画面が表示されます。`d`による削除はごみ箱を経由しないため、削除対象をよく確認してください。
+
+## 11. トラブルシューティング
 
 ### インストール直後にコマンドが見つからない
 
@@ -284,7 +323,7 @@ Neovim 0.12では`nvim-treesitter`の`main`ブランチを使用します。0.11
 .\manage-nvim.bat update
 ```
 
-## 11. 日常的な更新手順
+## 12. 日常的な更新手順
 
 リポジトリ側の設定を変更した場合は、Neovimを終了して次を実行します。
 

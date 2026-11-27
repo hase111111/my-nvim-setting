@@ -63,10 +63,19 @@ nvim
 - `tokyonight.nvim`: カラーテーマ
 - `which-key.nvim`: キーマップのガイド
 - `telescope.nvim`: ファイル・文字列検索
+- `nvim-tree.lua`: ツリー型ファイラー
 - `nvim-treesitter`: 構文解析とハイライト
 - `mason.nvim`: clangdなどの開発ツール管理
 - `nvim-lspconfig`: NeovimのLSP設定
 - `blink.cmp`: コード補完
+- `barbar.nvim`: バッファをタブ風に表示
+- `lualine.nvim`: ステータスライン
+- `toggleterm.nvim`: Neovim内ターミナル
+- `winresizer`: 分割ウィンドウのサイズ変更
+- `nvim-autopairs`: 括弧や引用符の自動補完
+- `nvim-hlslens`: 検索結果の位置と件数を表示
+- `nvim-scrollbar`: カーソル・診断・検索結果をスクロールバーに表示
+- `accelerated-jk.nvim`: `j` / `k`の連続移動を加速
 
 Neovim内では`:Lazy`で管理画面を開けます。コマンドラインから一括更新する場合は`manage-nvim.bat update`を実行します。更新後の`lazy-lock.json`は`Windows/nvim`へコピーされ、Gitで管理できます。次回`setup`すると、固定されたバージョンも配置されます。
 
@@ -79,6 +88,13 @@ Neovim内では`:Lazy`で管理画面を開けます。コマンドラインか�
 | `<Space>fg` | ファイル内容を検索 |
 | `<Space>fb` | 開いているバッファを検索 |
 | `<Space>fh` | ヘルプを検索 |
+| `<Space>e` | ファイラーを開閉 |
+| `<Space>t` / `Ctrl+\` | ターミナルを開閉 |
+| `j` / `k` | 通常移動（連続入力すると加速） |
+| `<Space>wr` | ウィンドウサイズ変更モード |
+| `Alt+,` / `Alt+.` | 前後のバッファへ移動 |
+| `Alt+c` | バッファを閉じる |
+| `Alt+p` | バッファを固定／解除 |
 | `gd` | 定義へ移動 |
 | `gD` | 宣言へ移動 |
 | `gr` | 参照箇所を表示 |
